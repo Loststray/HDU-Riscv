@@ -1,0 +1,39 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "D:\iverilog\lib\ivl\system.vpi";
+:vpi_module "D:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "D:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "D:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "D:\iverilog\lib\ivl\va_math.vpi";
+:vpi_module "D:\iverilog\lib\ivl\v2009.vpi";
+S_0000019c26603250 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0000019c26602d00 .scope module, "module_top" "module_top" 3 2;
+ .timescale -9 -12;
+enum0000019c26603c40 .enum2/s (32)
+   "a" 0,
+   "b" 1,
+   "c" 2
+ ;
+S_0000019c26602e90 .scope begin, "$unm_blk_1" "$unm_blk_1" 3 4, 3 4 0, S_0000019c26602d00;
+ .timescale -9 -12;
+    .scope S_0000019c26602d00;
+T_0 ;
+    %fork t_1, S_0000019c26602e90;
+    %jmp t_0;
+    .scope S_0000019c26602e90;
+t_1 ;
+    %vpi_call/w 3 6 "$display", "%d", 32'sb00000000000000000000000000000000 {0 0 0};
+    %end;
+    .scope S_0000019c26602d00;
+t_0 %join;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    ".\wtf.sv";
