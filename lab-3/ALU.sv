@@ -1,14 +1,14 @@
 `timescale 1ns / 1ps
 module module_alu
     (
-    input [31:0]ALU_A,
-    input [31:0]ALU_B,
-    input [3:0]ALU_OP,
-    output [31:0]F,
-    output ZF,
-    output SF,
-    output CF,
-    output OF
+        input [31:0]ALU_A,
+        input [31:0]ALU_B,
+        input [3:0]ALU_OP,
+        output [31:0]F,
+        output ZF,
+        output SF,
+        output CF,
+        output OF
     );
     typedef enum logic[3:0]{ add=4'b0000,sll=4'b0001 ,slt=4'b0010,sltu=4'b0011,lxor=4'b0100,srl=4'b0101,lor=4'b0110,land=4'b0111,sub=4'b1000,sra=4'b1101 } states;
     reg C32;

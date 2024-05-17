@@ -1,9 +1,10 @@
+`timescale 1ns / 1ps
 module module_register
     (
-    input[31:0] in,
-    input clk,
-    input rst_n,
-    output [31:0] out
+        input[31:0] in,
+        input clk,
+        input rst_n,
+        output [31:0] out
     );
     reg [31:0] temp_reg;
     always@(negedge rst_n or posedge clk)
